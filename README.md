@@ -1,4 +1,4 @@
-# Lewis' Caddy-based Webserver
+# My Caddy-based Webserver
 My goal with this project is to have a configured webserver I can be proud of, that is easy to set up and modify.
 I will aim to put README files in each directory to explain how they are useful.
 
