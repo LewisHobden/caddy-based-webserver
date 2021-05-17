@@ -1,0 +1,15 @@
+version '3'
+
+services:
+  backend.dobercorgi.info:
+    container_name: dobercorgi-backend
+    image: registry.digitalocean.com/lewis/backend.dobercorgi.info:latest
+    networks:
+      - caddy-network
+    volumes:
+      - ./logs:/var/www/html/storage/logs
+      - ./config/.env:/var/www/html/.env
+
+network:
+  caddy-network:
+    external: true
