@@ -1,0 +1,3 @@
+backend.dobercorgi.info {
+  reverse_proxy dobercorgi-backend
+}
