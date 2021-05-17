@@ -1,4 +1,4 @@
-# www Directory
+# Directory: `www`
 This is where the website configurations are kept. Each of the web projects should be kept in a directory that matches their FQDN, to easily separate subdomains. 
 
 ## Key
