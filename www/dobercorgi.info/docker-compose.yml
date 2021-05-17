@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dobercorgi:
+    container_name: dobercorgi
+    image: registry.digitalocean.com/lewis/dobercorgi.info:latest
+    networks:
+     - caddy-network
+
+networks:
+  caddy-network:
+    external: true

@@ -1,0 +1,21 @@
+version: "3"
+services:
+  ackee:
+    image: electerious/ackee
+    container_name: analytics
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      - WAIT_HOSTS=mongo:27017
+      - ACKEE_MONGODB=mongodb://mongo:27017/ackee
+    env_file:
+      - config/.env
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    volumes:
+      - /var/lib/mongodb:/data/db
