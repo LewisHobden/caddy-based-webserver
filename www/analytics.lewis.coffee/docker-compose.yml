@@ -4,8 +4,9 @@ services:
     image: electerious/ackee
     container_name: analytics
     restart: unless-stopped
-    ports:
-      - "3003:3003"
+    networks:
+      - caddy-network
+      - ackee-network
     environment:
       - WAIT_HOSTS=mongo:27017
       - ACKEE_MONGODB=mongodb://mongo:27017/ackee
@@ -17,5 +18,12 @@ services:
     image: mongo
     container_name: mongo
     restart: always
+    networks:
+      - ackee-network
     volumes:
       - /var/lib/mongodb:/data/db
+
+networks:
+  ackee-network:
+  caddy-network:
+    external: true

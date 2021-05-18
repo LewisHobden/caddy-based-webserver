@@ -1,5 +1,9 @@
 backend.dobercorgi.info {
-  reverse_proxy dobercorgi-backend
+  reverse_proxy dobercorgi_backend
+}
+
+analytics.lewis.coffee {
+  reverse_proxy analytics:3003
 }
 
 dobercorgi.info {
