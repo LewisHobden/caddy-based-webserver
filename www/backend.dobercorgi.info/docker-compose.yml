@@ -4,6 +4,7 @@ services:
   backend.dobercorgi.info:
     container_name: dobercorgi-backend
     image: registry.digitalocean.com/lewis/backend.dobercorgi.info:latest
+    restart: unless-stopped
     networks:
       - caddy-network
     volumes:

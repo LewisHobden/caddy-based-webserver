@@ -4,6 +4,7 @@ services:
   dobercorgi:
     container_name: dobercorgi
     image: registry.digitalocean.com/lewis/dobercorgi.info:latest
+    restart: unless-stopped
     networks:
      - caddy-network
 

@@ -3,7 +3,7 @@ services:
   ackee:
     image: electerious/ackee
     container_name: analytics
-    restart: always
+    restart: unless-stopped
     ports:
       - "3003:3003"
     environment:
