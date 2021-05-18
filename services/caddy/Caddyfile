@@ -7,6 +7,6 @@ dobercorgi.info {
 }
 
 long-dair.com {
-  root * /srv/www/long-dair.com
+  root * /long-dair-html
   file_server
 }

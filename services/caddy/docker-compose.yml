@@ -12,6 +12,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./data/:/etc/caddy/
       - ./files/:/usr/share/caddy/
+      - /srv/www/long-dair.com/html:/long-dair-html
     ports:
       - 80:80
       - 443:443
