@@ -14,3 +14,11 @@ long-dair.com {
   root * /long-dair-html
   file_server
 }
+
+*.migaga.info {
+  reverse_proxy bookstack-migaga.info:80
+}
+
+lewis.coffee {
+  reverse_proxy ghostcms:2368
+}
