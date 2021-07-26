@@ -1,0 +1,4 @@
+config/ghost.env
+config/database.env
+
+data/*

@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  ghost:
+    container_name: ghostcms
+    image: ghost:4-alpine
+    restart: always
+    env_file: config/ghost.env
+    networks:
+      - caddy-network
+      - db-network
+    volumes:
+      - ./data/ghost:/var/lib/ghost/content
+
+  db:
+    image: mysql:5.7
+    restart: always
+    env_file: config/database.env
+    networks:
+      - db-network
+    volumes:
+      - ./data/database:/var/lib/mysql
+
+networks:
+  caddy-network:
+    external: true
+  db-network: 
